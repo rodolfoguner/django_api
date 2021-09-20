@@ -1,5 +1,4 @@
 from django.contrib import admin
-from django.db.models.expressions import F
 from django.urls import path, include
 from rest_framework import routers
 from client.views import ClientViewSet
