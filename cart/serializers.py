@@ -1,9 +1,9 @@
-from django.db.models import fields
 from rest_framework import serializers
 from .models import Cart
 
 
 class CartSerializer(serializers.ModelSerializer):
+    products = serializers.StringRelatedField(many=True)
     class Meta:
         model = Cart
-        fields = ['id', 'total', 'owner', 'product']
+        fields = ['id','owner', 'total', 'products']
