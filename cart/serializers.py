@@ -6,4 +6,9 @@ class CartSerializer(serializers.ModelSerializer):
     products = serializers.StringRelatedField(many=True)
     class Meta:
         model = Cart
-        fields = ['id','owner', 'total', 'products']
+        fields = [
+            'id',
+            'owner', 
+            'total', 
+            'products'
+        ]

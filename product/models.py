@@ -6,8 +6,7 @@ from category.models import Category
 class Product(models.Model):
     name = CharField(max_length=25)
     price = FloatField()
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
-
+    category = models.ForeignKey(Category, related_name='products', on_delete=models.CASCADE)
 
     def __str__(self):
         return f'{self.id}: {self.name}'
