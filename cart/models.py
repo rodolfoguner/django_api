@@ -11,4 +11,4 @@ class Cart(models.Model):
     products = models.ManyToManyField(Product, related_name='carts')
 
     def __str__(self):
-        return f'{self.id} {self.total}' 
+        return f'{self.id} {self.owner}' 

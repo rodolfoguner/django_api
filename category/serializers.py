@@ -6,7 +6,7 @@ from product.models import Product
 
 
 class CategorySerializer(serializers.ModelSerializer):
-    Product.products = serializers.StringRelatedField(read_only=True)
+    Product.products = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     class Meta:
         model = Category
         fields = [
