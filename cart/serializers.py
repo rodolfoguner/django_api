@@ -3,12 +3,7 @@ from .models import Cart
 
 
 class CartSerializer(serializers.ModelSerializer):
-    products = serializers.StringRelatedField(many=True)
+    total = serializers.ReadOnlyField()
     class Meta:
         model = Cart
-        fields = [
-            'id',
-            'owner', 
-            'total', 
-            'products'
-        ]
+        exclude = []
