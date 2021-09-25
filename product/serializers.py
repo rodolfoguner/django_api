@@ -1,15 +1,15 @@
-from django.db import models
-from django.db.models import fields
 from rest_framework import serializers
-from rest_framework.relations import StringRelatedField
 from .models import Product
+from category.serializers import CategorySerializer
 
 
 class ProductSerializer(serializers.ModelSerializer):
+    category = CategorySerializer(read_only=True)
     class Meta:
         model = Product
         fields = [
             'id', 
             'name', 
             'price',
+            'category'
         ]
