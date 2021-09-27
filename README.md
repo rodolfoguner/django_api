@@ -20,7 +20,7 @@ Activate the virtualenv with:
 source venv/bin/activate
 
 * In Windows:
-activate
+venv/Scripts/activate
 
 And then install the requirements of this project, using:
 
