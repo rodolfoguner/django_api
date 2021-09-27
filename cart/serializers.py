@@ -7,7 +7,7 @@ from .models import Cart
 
 class CartSerializer(serializers.ModelSerializer):
     total = serializers.ReadOnlyField()
-    products = serializers.StringRelatedField(many=True)
+    #products = serializers.StringRelatedField(many=True)
     class Meta:
         model = Cart
         fields = [

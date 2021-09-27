@@ -42,3 +42,20 @@ And:
 
 python manage.py runserver
 
+
+#### 2.2 Executing test with postman
+
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/17577871-bd624e35-4eaf-4a06-b5e8-04407e464349?action=collection%2Ffork&collection-url=entityId%3D17577871-bd624e35-4eaf-4a06-b5e8-04407e464349%26entityType%3Dcollection%26workspaceId%3D8d12c232-b3d7-41a9-9248-b940c09757fd)
+
+
+Testing update and delete is necessary to change the ID in the link of the registration:
+
+Example:
+
+http://127.0.0.1:8000/client/2/ 
+
+and change 
+
+http://127.0.0.1:8000/client/3/
+
+If the ID don't exist.
