@@ -9,3 +9,7 @@ pip-delete-this-directory.tx
 # Django stuff:
 *.log
 *.pot
+db.sqlite3
+
+# Venv python   
+venv/
