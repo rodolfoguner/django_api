@@ -1,16 +1,15 @@
-from cart.serializers import CartSerializer
 from rest_framework import serializers
 from .models import Client
-from cart.serializers import CartSerializer
-
+from .validators import *
 
 class ClientSerializer(serializers.ModelSerializer):
-    carts = CartSerializer(many=True, read_only=True)
     class Meta:
         model = Client
-        fields = [
-            'id',
-            'name',
-            'cpf',
-            'carts',
-        ]
+        fields = '__all__'
+
+    def validate(self, data):
+        if not valid_name(data['name']):
+            raise serializers.ValidationError({'name': 'Name should not content numbers'})
+        if not valid_cpf(data['cpf']):
+            raise serializers.ValidationError({'cpf': 'CPF is not valid'})
+        return data
