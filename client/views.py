@@ -7,5 +7,3 @@ from .serializers import ClientSerializer
 class ClientViewSet(viewsets.ModelViewSet):
     queryset = Client.objects.all()
     serializer_class = ClientSerializer
-    
-    

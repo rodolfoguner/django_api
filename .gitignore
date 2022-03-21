@@ -14,3 +14,7 @@ db.sqlite3
 # Venv python   
 venv/
 .venv/
+
+# IDEs stuff
+.vscode
+.idea

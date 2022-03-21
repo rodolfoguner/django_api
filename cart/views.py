@@ -1,9 +1,9 @@
-from rest_framework import serializers, viewsets
-from .serializers import CartSerializer
+from rest_framework import viewsets
+from .serializers import CartInputSerializer
 from .models import Cart
 
 
 class CartViewSet(viewsets.ModelViewSet):
-    serializer_class = CartSerializer
+    serializer_class = CartInputSerializer
     queryset = Cart.objects.all()
     

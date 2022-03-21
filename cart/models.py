@@ -10,7 +10,7 @@ class Cart(models.Model):
     products = models.ManyToManyField(Product, related_name='products')
 
     def __str__(self):
-        return f'{self.id} {self.owner}' 
+        return f'{self.owner}'
 
 
 def m2m_changed_cart_total(sender, instance, action, *args, **kwargs):
